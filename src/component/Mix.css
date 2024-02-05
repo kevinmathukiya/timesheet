@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.firstBox {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #0c1022;
+}
+
+.secondbox {
+    z-index: 1000;
+    color: white;
+    position: absolute;
+    top: 20px;
+}
+
+.formheading {
+    position: relative;
+    z-index: 2 !important;
+    color: #fff;
+    font-size: 2rem !important;
+    text-align: center !important;
+}
+
+.loginimage {
+    border-radius: 9999px;
+    height: 100px;
+    width: 100px;
+}
+
+.formpage {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.formlabel {
+    color: white !important;
+    font-weight: bold !important;
+    padding-top: 30px !important;
+}
+
+.formfield {
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 30px;
+    outline: none;
+    font-weight: bold;
+}
+
+.formbutton {
+    margin: 40px 50px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: "5px 0px";
+    background-color: white;
+    width: 150px;
+    border-radius: 10px;
+    transition: 'background-color 0.3s ease';
+}
+
+.formbutton:hover {
+    background-color: coral;
+    cursor: pointer;
+}
+
+.border-blur {
+    position: absolute;
+    width: 330px;
+    height: 530px;
+    background: transparent;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(50px);
+}
+
+.box {
+    position: relative;
+    width: 330px;
+    height: 530px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.border-blur::before,
+.border-blur::after {
+    border-radius: 50%;
+    height: 580px !important;
+    width: 500px !important;
+}
+
+.box::after,
+.border-blur::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,
+            transparent,
+            transparent,
+            #d400d4);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box::before,
+.border-blur::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,
+            transparent,
+            transparent,
+            #00ccff);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: #0c1022;
+    z-index: 1;
+}
+
+.errorlogin {
+    text-align: center;
+    padding-top: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
