@@ -143,20 +143,20 @@ export default function Dashboard() {
 
                                     {formObj?.storydata?.map((e, index) => {
                                         return <>
-                                            <FormTextField InputLabelProps={{ shrink: true }} type='text' name={`storydata[${index}].story`} value={e?.story} onBlur={handleBlur} onChange={handleChange} label="Story" />
+                                            <FormTextField InputLabelProps={{ shrink: true }} type='text' name={`storydata[${index}].story`} value={values?.story} onBlur={handleBlur} onChange={handleChange} label="Story" />
                                             {errors.storydata && touched.storydata && errors.storydata[index]?.story && touched.storydata[index]?.story ? <Error>{errors.storydata[index]?.story}</Error> : null}
                                             <TimeDiv>
                                                 <Typography>
-                                                    <DateStratEnd InputLabelProps={{ shrink: true }} type='time' name={`storydata[${index}].starttime`} value={e?.starttime} onBlur={handleBlur} onChange={handleChange} label="Start Time" />
+                                                    <DateStratEnd InputLabelProps={{ shrink: true }} type='time' name={`storydata[${index}].starttime`} value={values?.starttime} onBlur={handleBlur} onChange={handleChange} label="Start Time" />
                                                     {errors.storydata && touched.storydata && errors.storydata[index]?.starttime && touched.storydata[index]?.starttime ? <Error>{errors.storydata[index]?.starttime}</Error> : null}
                                                 </Typography>
                                                 <Typography>
-                                                    <DateStratEnd InputLabelProps={{ shrink: true }} type='time' name={`storydata[${index}].endtime`} value={e?.endtime} onBlur={handleBlur} onChange={handleChange} label="End Time" />
+                                                    <DateStratEnd InputLabelProps={{ shrink: true }} type='time' name={`storydata[${index}].endtime`} value={values?.endtime} onBlur={handleBlur} onChange={handleChange} label="End Time" />
                                                     {errors.storydata && touched.storydata && errors.storydata[index]?.endtime && touched.storydata[index]?.endtime ? <Error>{errors.storydata[index]?.endtime}</Error> : null}
                                                 </Typography>
                                             </TimeDiv>
 
-                                            <FormTextField InputLabelProps={{ shrink: true }} type='text' name={`storydata[${index}].task`} value={e?.task} onBlur={handleBlur} onChange={handleChange} label="Task" />
+                                            <FormTextField InputLabelProps={{ shrink: true }} type='text' name={`storydata[${index}].task`} value={values?.task} onBlur={handleBlur} onChange={handleChange} label="Task" />
                                             {errors.storydata && touched.storydata && errors.storydata[index]?.task && touched.storydata[index]?.task ? <Error>{errors.storydata[index]?.task}</Error> : null}
                                         </>
                                     })}
