@@ -37,7 +37,7 @@ export default function Dashboard() {
     }
 
     const FormUser = (tablevalue) => {
-        if (no >= 0) {
+        if (no === 0 || no > 0) {
             userdata[no] = tablevalue;
             localStorage.setItem('timesheet', JSON.stringify(userdata));
             setUserdata(userdata);
